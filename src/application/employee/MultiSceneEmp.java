@@ -23,6 +23,10 @@ public class MultiSceneEmp extends Application {
             primaryStage.setTitle("Exemple de gestion de plusieurs scènes");
 
 //Spécification de Scene 1
+
+
+
+
             Label label1= new Label("Je suis sur la première scène");
 
             Button button1= new Button("Cliquez pour aller sur Scene 2");

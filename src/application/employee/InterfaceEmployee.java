@@ -62,6 +62,7 @@ public class InterfaceEmployee extends Application {
                 //String path = String.valueOf(fileChooser.showOpenDialog(stage));
                 LesEmployes lesEmployes = new LesEmployes(path);
                 label.setText(lesEmployes.fabriqueChaine());
+                System.out.println(label);
 
             }
         });

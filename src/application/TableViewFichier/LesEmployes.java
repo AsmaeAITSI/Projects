@@ -1,4 +1,6 @@
-package application.employee;
+package application.TableViewFichier;
+
+import application.TableViewFichier.Employe;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -38,7 +40,7 @@ public class LesEmployes {
  
     // Transforme une chaine en un objet de type Employe
     //format de la chaine : 1*BARBE*Rue des Vignes Paris*0123546789*10000
-    private Employe fabriqueEmploye(String chaine){
+	private Employe fabriqueEmploye(String chaine){
         Employe emp=null;
         StringTokenizer st = new StringTokenizer(chaine, "*");
         if(st.countTokens()==5){
@@ -47,10 +49,8 @@ public class LesEmployes {
             String adresse= st.nextToken();
             String telephone = st.nextToken(); 
             double salaire= Double.parseDouble(st.nextToken());
-            emp = new Employe(code,nom,adresse,telephone,salaire);
-            System.out.println(st);
-        }
-
+			emp = new Employe(code,nom,adresse,telephone,salaire);
+        }   
         return emp;
     }
     //Transformer le fichier en une collection d'employés
@@ -79,7 +79,7 @@ public class LesEmployes {
             do{
                 chaine= bfr.readLine() ;
                 if(chaine!=null){
-                    chainebf.append(chaine +"\n");
+                	chainebf.append(chaine +"\n");
                 }
             }while(chaine!=null);          
         }catch(IOException e){
